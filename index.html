@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApiTvShow — Entertainment News for TikTok</title>
+    <style>
+        :root {
+            --primary: #fe2c55;
+            --dark: #161823;
+            --light: #f8f8f8;
+            --gray: #8a8b91;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--dark);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        /* ── HEADER ── */
+        header {
+            background: var(--dark);
+            color: var(--white);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .logo span { color: var(--primary); }
+
+        nav a {
+            color: var(--gray);
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover { color: var(--white); }
+
+        /* ── HERO ── */
+        .hero {
+            background: linear-gradient(135deg, var(--dark) 0%, #25282c 100%);
+            color: var(--white);
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span { color: var(--primary); }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--gray);
+            max-width: 640px;
+            margin: 0 auto 32px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(254, 44, 85, 0.12);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        /* ── FEATURES ── */
+        .features {
+            padding: 64px 0;
+            background: var(--light);
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 32px 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+
+        .feature-card .icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            color: var(--gray);
+            font-size: 0.92rem;
+        }
+
+        /* ── HOW IT WORKS ── */
+        .how-it-works {
+            padding: 64px 0;
+        }
+
+        .how-it-works h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+        }
+
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+        }
+
+        .step {
+            flex: 1 1 220px;
+            max-width: 240px;
+            text-align: center;
+        }
+
+        .step-number {
+            width: 48px;
+            height: 48px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .step h3 {
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+
+        .step p {
+            color: var(--gray);
+            font-size: 0.88rem;
+        }
+
+        /* ── TIKTOK INTEGRATION ── */
+        .integration {
+            padding: 64px 0;
+            background: var(--dark);
+            color: var(--white);
+        }
+
+        .integration h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+        }
+
+        .integration > .container > p {
+            text-align: center;
+            color: var(--gray);
+            max-width: 640px;
+            margin: 0 auto 32px;
+            font-size: 0.95rem;
+        }
+
+        .integration-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .int-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 10px;
+            padding: 24px;
+        }
+
+        .int-card h3 {
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .int-card p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            padding: 32px 0;
+            border-top: 1px solid #e8e8e8;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        footer a {
+            color: var(--gray);
+            text-decoration: none;
+            margin: 0 12px;
+        }
+
+        footer a:hover { color: var(--primary); }
+
+        .footer-links { margin-bottom: 12px; }
+
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 1.8rem; }
+            .features h2, .how-it-works h2, .integration h2 { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <a href="index.html" class="logo">Api<span>TvShow</span></a>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#integration">TikTok Integration</a>
+            <a href="terminos.html">Terms</a>
+            <a href="privacidad.html">Privacy</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <div class="badge">Desktop Application &middot; Content Posting API</div>
+        <h1>Entertainment News,<br>Automated for <span>TikTok</span></h1>
+        <p>ApiTvShow is a desktop content automation platform that curates trending entertainment news from Argentina, generates short-form videos with AI-powered captions, and publishes them directly to the creator's TikTok profile.</p>
+    </div>
+</section>
+
+<section class="features" id="features">
+    <div class="container">
+        <h2>What ApiTvShow Does</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon">📰</div>
+                <h3>News Aggregation</h3>
+                <p>Scrapes trending entertainment, TV shows, and celebrity news from verified Argentine media sources including Infobae, TN, and A24.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🤖</div>
+                <h3>AI-Powered Captions</h3>
+                <p>Uses Google Gemini AI to generate engaging, context-aware captions in Spanish optimized for social media engagement.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🎬</div>
+                <h3>Video Generation</h3>
+                <p>Automatically creates short-form vertical videos with text overlays, fade-in animations, and background music using FFmpeg.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📲</div>
+                <h3>Direct TikTok Publishing</h3>
+                <p>Posts generated videos directly to the authenticated creator's TikTok account via the Content Posting API with proper captions and metadata.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📊</div>
+                <h3>Dashboard Management</h3>
+                <p>Web-based dashboard to monitor publishing pipeline, schedule automated posts, review content before publishing, and track quota usage.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🔒</div>
+                <h3>Single-Creator Model</h3>
+                <p>Designed for a single authenticated creator. No external users interact with the app — only the account owner manages and authorizes content.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="how-it-works" id="how-it-works">
+    <div class="container">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Scrape</h3>
+                <p>The platform collects the latest entertainment articles from multiple verified news sources.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Enrich</h3>
+                <p>Articles are enriched with metadata, images, and publication dates from the original sources.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Generate</h3>
+                <p>AI creates an engaging caption, and FFmpeg composes a branded short-form video with text overlay.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Publish</h3>
+                <p>The video is uploaded to the creator's TikTok account via the Content Posting API with the generated caption.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="integration" id="integration">
+    <div class="container">
+        <h2>TikTok API Integration</h2>
+        <p>ApiTvShow integrates with TikTok's Content Posting API following all platform guidelines and best practices.</p>
+        <div class="integration-details">
+            <div class="int-card">
+                <h3>Authentication</h3>
+                <p>Uses OAuth 2.0 with PKCE for secure authorization. The creator explicitly grants access through TikTok's login flow. Tokens are refreshed automatically and stored securely on the local machine.</p>
+            </div>
+            <div class="int-card">
+                <h3>Content Posting</h3>
+                <p>Videos are uploaded using the <code>FILE_UPLOAD</code> method via the Direct Post endpoint. Each post includes the AI-generated caption as the title and respects the creator's privacy settings.</p>
+            </div>
+            <div class="int-card">
+                <h3>Scopes Used</h3>
+                <p><strong>user.info.basic</strong> — Read profile info for authentication.<br>
+                <strong>video.publish</strong> — Post content directly to the creator's profile.<br>
+                <strong>video.upload</strong> — Upload video drafts for review before publishing.</p>
+            </div>
+            <div class="int-card">
+                <h3>User Consent &amp; Data</h3>
+                <p>The creator explicitly authorizes all TikTok interactions through the OAuth flow. No data from external users is collected. The app operates in a single-creator model with no public-facing user accounts.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <a href="terminos.html">Terms of Service</a>
+            <a href="privacidad.html">Privacy Policy</a>
+        </div>
+        <p>&copy; 2025–2026 ApiTvShow. All rights reserved. Built in Argentina.</p>
+    </div>
+</footer>
+
+</body>
+</html>

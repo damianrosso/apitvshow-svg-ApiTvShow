@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad — ApiTvShow</title>
+    <style>
+        :root {
+            --primary: #fe2c55;
+            --dark: #161823;
+            --light: #f8f8f8;
+            --gray: #8a8b91;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--dark);
+            background: var(--white);
+            line-height: 1.7;
+        }
+
+        header {
+            background: var(--dark);
+            color: var(--white);
+            padding: 16px 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header .container {
+            max-width: 1100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .logo span { color: var(--primary); }
+
+        nav a {
+            color: var(--gray);
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover { color: var(--white); }
+
+        .content {
+            padding: 48px 0 80px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .last-updated {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            color: var(--dark);
+        }
+
+        p, li {
+            font-size: 0.95rem;
+            color: #333;
+            margin-bottom: 12px;
+        }
+
+        ul {
+            padding-left: 24px;
+            margin-bottom: 12px;
+        }
+
+        li { margin-bottom: 6px; }
+
+        a { color: var(--primary); }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 0.92rem;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 10px 14px;
+            border: 1px solid #e0e0e0;
+        }
+
+        th {
+            background: var(--light);
+            font-weight: 600;
+        }
+
+        footer {
+            padding: 24px 0;
+            border-top: 1px solid #e8e8e8;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        footer a {
+            color: var(--gray);
+            text-decoration: none;
+            margin: 0 12px;
+        }
+
+        footer a:hover { color: var(--primary); }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <a href="index.html" class="logo">Api<span>TvShow</span></a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="terminos.html">Terms</a>
+            <a href="privacidad.html">Privacy</a>
+        </nav>
+    </div>
+</header>
+
+<div class="content">
+    <div class="container">
+        <h1>Política de Privacidad</h1>
+        <p class="last-updated">Última actualización: 30 de marzo de 2026</p>
+
+        <p>Esta Política de Privacidad describe cómo ApiTvShow recopila, usa, almacena y protege la información en relación con nuestro servicio de automatización de contenido de entretenimiento y su integración con la plataforma TikTok.</p>
+
+        <h2>1. Modelo de Uso</h2>
+        <p>ApiTvShow opera bajo un modelo de <strong>creador único</strong>. La aplicación es utilizada exclusivamente por el propietario de la cuenta de TikTok conectada. No existen cuentas de usuarios externos, páginas de registro, ni interacción de terceros con la plataforma.</p>
+
+        <h2>2. Información Recopilada</h2>
+        <p>ApiTvShow recopila y almacena la siguiente información de forma local en el dispositivo del creador:</p>
+
+        <table>
+            <tr>
+                <th>Dato</th>
+                <th>Fuente</th>
+                <th>Propósito</th>
+            </tr>
+            <tr>
+                <td>Access Token de TikTok</td>
+                <td>Flujo OAuth 2.0 de TikTok</td>
+                <td>Autenticar y publicar contenido en la cuenta del creador</td>
+            </tr>
+            <tr>
+                <td>Refresh Token de TikTok</td>
+                <td>Flujo OAuth 2.0 de TikTok</td>
+                <td>Renovar el access token cuando expira</td>
+            </tr>
+            <tr>
+                <td>Open ID del usuario</td>
+                <td>API de TikTok (user.info.basic)</td>
+                <td>Identificar al creador autenticado</td>
+            </tr>
+            <tr>
+                <td>Artículos de noticias</td>
+                <td>Sitios de noticias públicos</td>
+                <td>Generar contenido para los videos</td>
+            </tr>
+        </table>
+
+        <h2>3. Uso de la Información</h2>
+        <p>La información recopilada se utiliza estrictamente para:</p>
+        <ul>
+            <li><strong>Autenticación:</strong> Conectar de forma segura con la API de TikTok para publicar contenido.</li>
+            <li><strong>Publicación de contenido:</strong> Subir videos generados automáticamente con subtítulos a la cuenta de TikTok del creador.</li>
+            <li><strong>Refresco de tokens:</strong> Mantener activa la sesión de autenticación sin requerir que el creador vuelva a iniciar sesión manualmente.</li>
+        </ul>
+        <p>La información <strong>no se usa</strong> para:</p>
+        <ul>
+            <li>Rastreo, perfilado o publicidad.</li>
+            <li>Analítica o procesamiento de datos de terceros.</li>
+            <li>Venta, cesión o transferencia de datos a ningún tercero.</li>
+        </ul>
+
+        <h2>4. Almacenamiento y Seguridad</h2>
+        <p>Todos los datos se almacenan <strong>localmente</strong> en el dispositivo del creador en archivos de configuración JSON. No se utilizan servidores en la nube, bases de datos externas ni servicios de almacenamiento de terceros para la información del usuario.</p>
+        <ul>
+            <li>Los tokens de acceso se almacenan en archivos de configuración locales protegidos por los permisos del sistema operativo.</li>
+            <li>Los tokens se renuevan automáticamente y los antiguos se sobrescriben.</li>
+            <li>No se transmiten datos personales fuera de las llamadas directas a la API de TikTok.</li>
+        </ul>
+
+        <h2>5. Compartición de Datos con Terceros</h2>
+        <p>ApiTvShow <strong>no comparte, vende ni transfiere</strong> información personal o tokens de autenticación a ningún tercero. Las únicas comunicaciones externas son:</p>
+        <ul>
+            <li><strong>API de TikTok:</strong> Para autenticación y publicación de contenido, según lo autorizado explícitamente por el creador.</li>
+            <li><strong>API de Google Gemini:</strong> Se envía únicamente el texto del artículo de noticias (sin datos personales) para generar subtítulos.</li>
+            <li><strong>Sitios de noticias públicos:</strong> Se accede a contenido de acceso público para recopilar artículos de noticias.</li>
+        </ul>
+
+        <h2>6. APIs de TikTok y Scopes Utilizados</h2>
+        <p>ApiTvShow solicita los siguientes permisos de TikTok, cada uno autorizado explícitamente por el creador durante el flujo de inicio de sesión:</p>
+        <table>
+            <tr>
+                <th>Scope</th>
+                <th>Propósito</th>
+            </tr>
+            <tr>
+                <td><code>user.info.basic</code></td>
+                <td>Leer información básica del perfil (Open ID, avatar, nombre de usuario) para autenticación.</td>
+            </tr>
+            <tr>
+                <td><code>video.publish</code></td>
+                <td>Publicar contenido de video directamente en el perfil de TikTok del creador.</td>
+            </tr>
+            <tr>
+                <td><code>video.upload</code></td>
+                <td>Subir borradores de video a la cuenta del creador para edición y revisión antes de publicar.</td>
+            </tr>
+        </table>
+
+        <h2>7. Retención de Datos</h2>
+        <ul>
+            <li><strong>Tokens de autenticación:</strong> Se conservan mientras la aplicación esté activa. Se sobrescriben en cada refresco.</li>
+            <li><strong>Artículos de noticias:</strong> Se conservan por un máximo de 24 horas y luego se eliminan automáticamente.</li>
+            <li><strong>Videos generados:</strong> Se almacenan temporalmente en la carpeta local y se sobrescriben en cada nueva ejecución.</li>
+        </ul>
+
+        <h2>8. Derechos del Creador</h2>
+        <p>El creador puede en cualquier momento:</p>
+        <ul>
+            <li><strong>Revocar el acceso:</strong> Desconectar ApiTvShow desde la configuración de TikTok (<em>Configuración → Seguridad → Gestionar permisos de apps</em>).</li>
+            <li><strong>Eliminar datos locales:</strong> Borrar los archivos de configuración de la aplicación que contienen los tokens.</li>
+            <li><strong>Dejar de usar la aplicación:</strong> Simplemente dejar de ejecutar ApiTvShow; no quedan datos residuales en la nube.</li>
+        </ul>
+
+        <h2>9. Privacidad de Menores</h2>
+        <p>ApiTvShow no está destinado a ser utilizado por menores de 18 años. La aplicación es operada exclusivamente por el creador propietario de la cuenta y no recopila información de menores.</p>
+
+        <h2>10. Cambios a esta Política</h2>
+        <p>Esta Política de Privacidad puede ser actualizada periódicamente para reflejar cambios en la aplicación o en los requisitos legales. Los cambios se publicarán en esta página con la fecha de actualización correspondiente.</p>
+
+        <h2>11. Contacto</h2>
+        <p>Para consultas sobre esta Política de Privacidad o sobre el manejo de tus datos, podés contactarnos a través de nuestro repositorio o por correo electrónico.</p>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <a href="index.html">Home</a>
+        <a href="terminos.html">Terms of Service</a>
+        <a href="privacidad.html">Privacy Policy</a>
+        <p style="margin-top: 12px;">&copy; 2025–2026 ApiTvShow. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos de Servicio — ApiTvShow</title>
+    <style>
+        :root {
+            --primary: #fe2c55;
+            --dark: #161823;
+            --light: #f8f8f8;
+            --gray: #8a8b91;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--dark);
+            background: var(--white);
+            line-height: 1.7;
+        }
+
+        header {
+            background: var(--dark);
+            color: var(--white);
+            padding: 16px 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header .container {
+            max-width: 1100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .logo span { color: var(--primary); }
+
+        nav a {
+            color: var(--gray);
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover { color: var(--white); }
+
+        .content {
+            padding: 48px 0 80px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .last-updated {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            color: var(--dark);
+        }
+
+        p, li {
+            font-size: 0.95rem;
+            color: #333;
+            margin-bottom: 12px;
+        }
+
+        ul {
+            padding-left: 24px;
+            margin-bottom: 12px;
+        }
+
+        li { margin-bottom: 6px; }
+
+        a { color: var(--primary); }
+
+        footer {
+            padding: 24px 0;
+            border-top: 1px solid #e8e8e8;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        footer a {
+            color: var(--gray);
+            text-decoration: none;
+            margin: 0 12px;
+        }
+
+        footer a:hover { color: var(--primary); }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <a href="index.html" class="logo">Api<span>TvShow</span></a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="terminos.html">Terms</a>
+            <a href="privacidad.html">Privacy</a>
+        </nav>
+    </div>
+</header>
+
+<div class="content">
+    <div class="container">
+        <h1>Términos de Servicio</h1>
+        <p class="last-updated">Última actualización: 30 de marzo de 2026</p>
+
+        <h2>1. Descripción del Servicio</h2>
+        <p>ApiTvShow es una plataforma de automatización de contenido de escritorio que recopila noticias de entretenimiento de fuentes de medios verificadas en Argentina, genera videos de formato corto con subtítulos impulsados por inteligencia artificial y los publica en la cuenta de TikTok del creador autenticado a través de la Content Posting API de TikTok.</p>
+        <p>La aplicación opera bajo un modelo de creador único: solo el propietario de la cuenta autoriza, gestiona y publica contenido. No existen cuentas de usuarios externos ni interacciones de terceros con la plataforma.</p>
+
+        <h2>2. Aceptación de los Términos</h2>
+        <p>Al usar ApiTvShow, aceptás estos Términos de Servicio en su totalidad. Si no estás de acuerdo con alguna parte de estos términos, no debés usar la aplicación.</p>
+
+        <h2>3. Uso Aceptable</h2>
+        <p>Al usar ApiTvShow, te comprometés a:</p>
+        <ul>
+            <li>Utilizar la plataforma únicamente para publicar contenido legítimo de entretenimiento y noticias.</li>
+            <li>No usar la aplicación para distribuir contenido ilegal, difamatorio, ofensivo, de odio o que viole derechos de terceros.</li>
+            <li>No intentar eludir los límites de la API de TikTok ni otras restricciones de la plataforma.</li>
+            <li>Cumplir con los <a href="https://www.tiktok.com/legal/tik-tok-developer-terms-of-service" target="_blank">Términos de Servicio para Desarrolladores de TikTok</a> y las <a href="https://www.tiktok.com/community-guidelines" target="_blank">Guías de la Comunidad de TikTok</a>.</li>
+            <li>Asegurar que el contenido publicado no infrinja derechos de autor, marcas registradas ni derechos de propiedad intelectual de terceros.</li>
+        </ul>
+
+        <h2>4. Integración con TikTok</h2>
+        <p>ApiTvShow se integra con la API de TikTok utilizando autorización OAuth 2.0 con PKCE. Al conectar tu cuenta de TikTok:</p>
+        <ul>
+            <li>Autorizás explícitamente a la aplicación a publicar contenido en tu cuenta de TikTok.</li>
+            <li>Podés revocar el acceso en cualquier momento desde la configuración de tu cuenta de TikTok.</li>
+            <li>La aplicación respeta tus configuraciones de privacidad y los niveles de privacidad permitidos por TikTok.</li>
+        </ul>
+        <p>El uso de la API de TikTok por parte de ApiTvShow se rige por los <a href="https://www.tiktok.com/legal/tik-tok-developer-terms-of-service" target="_blank">Términos de Servicio para Desarrolladores de TikTok</a>. En caso de conflicto entre estos términos y los de TikTok, prevalecerán los términos de TikTok en lo que respecta al uso de su plataforma.</p>
+
+        <h2>5. Contenido Generado</h2>
+        <p>Los videos y subtítulos son generados automáticamente a partir de artículos de noticias de acceso público. ApiTvShow:</p>
+        <ul>
+            <li>No reclama propiedad sobre el contenido de las fuentes de noticias originales.</li>
+            <li>Genera subtítulos originales a través de IA basados en los artículos fuente.</li>
+            <li>Agrega elementos de marca visual (logos, overlays) a los videos generados.</li>
+        </ul>
+        <p>El creador que usa ApiTvShow es responsable del contenido que se publica en su cuenta de TikTok y debe asegurarse de que cumple con todas las guías y políticas aplicables.</p>
+
+        <h2>6. Propiedad Intelectual</h2>
+        <p>El software de ApiTvShow, incluyendo su código fuente, diseño, plantillas de video y marca, es propiedad del desarrollador. El creador retiene la propiedad de su cuenta de TikTok y del contenido publicado en ella.</p>
+
+        <h2>7. Limitación de Responsabilidad</h2>
+        <p>ApiTvShow se proporciona "tal cual" sin garantías de ningún tipo, ya sean expresas o implícitas. El desarrollador no será responsable por:</p>
+        <ul>
+            <li>Interrupciones del servicio, errores o fallas técnicas.</li>
+            <li>Contenido generado por IA que pueda ser inexacto o inapropiado.</li>
+            <li>Cambios en las políticas o API de TikTok que afecten la funcionalidad.</li>
+            <li>Cualquier consecuencia derivada del contenido publicado en la cuenta de TikTok del creador.</li>
+        </ul>
+
+        <h2>8. Terminación</h2>
+        <p>El desarrollador se reserva el derecho de suspender o terminar el acceso a ApiTvShow en cualquier momento, por cualquier motivo. El creador puede dejar de usar la aplicación y revocar el acceso de TikTok en cualquier momento.</p>
+
+        <h2>9. Modificaciones</h2>
+        <p>Estos Términos de Servicio pueden ser actualizados periódicamente. Los cambios se publicarán en esta página con la fecha de actualización correspondiente. El uso continuado de la aplicación después de los cambios constituye la aceptación de los términos modificados.</p>
+
+        <h2>10. Contacto</h2>
+        <p>Para consultas sobre estos Términos de Servicio, podés contactarnos a través de nuestro repositorio o por correo electrónico.</p>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <a href="index.html">Home</a>
+        <a href="terminos.html">Terms of Service</a>
+        <a href="privacidad.html">Privacy Policy</a>
+        <p style="margin-top: 12px;">&copy; 2025–2026 ApiTvShow. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
